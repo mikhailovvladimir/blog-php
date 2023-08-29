@@ -1,4 +1,5 @@
 <?php
+// конфиг это просто набор настроек
 
 return [
     '~^hello/(.*)$~' => [\MyProject\Controllers\MainController::class, 'sayHello'],
