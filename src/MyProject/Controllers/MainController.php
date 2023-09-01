@@ -2,6 +2,8 @@
 
 namespace MyProject\Controllers;
 
+use MyProject\Models\Articles\Article;
+
 class MainController
 {
     public function main()
@@ -12,5 +14,10 @@ class MainController
     public function sayHello(string $name)
     {
         echo 'Привет, ' . $name;
+    }
+
+    public function newPage()
+    {
+        echo 'new Page';
     }
 }
