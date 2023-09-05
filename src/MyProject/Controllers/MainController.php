@@ -18,8 +18,10 @@ class MainController
         $articles = [
             ['name' => 'Статья 1', 'text' => 'Текст статьи 1'],
             ['name' => 'Статья 2', 'text' => 'Текст статьи 2'],
-        ];
-        $this->view->renderHtml('main/main.php', ['articles' => $articles]);
+        ]; // данные, как будто бы мы получили из базы данных
+
+        // метод внутри объекта View, который загружает нужный html шаблон, и вставляет в него переменные
+        $this->view->renderHtml('main/main.php', ['list' => $articles]);
     }
 
     public function sayHello(string $name)
