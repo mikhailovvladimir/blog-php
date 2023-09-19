@@ -11,8 +11,10 @@ class View
         $this->templatesPath = $templatesPath; // базовый путь до наших html файлов
     }
 
-    public function renderHtml(string $templateName, array $vars = [])
+    public function renderHtml(string $templateName, array $vars = [], $code = 200)
     {
+        http_response_code($code);
+
         extract($vars); // ['age' => 23]
         // $age = 23;
 
